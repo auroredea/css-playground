@@ -7,18 +7,321 @@
 </head>
 <body>
 <div class="flex h-screen w-screen overflow-x-hidden">
-    <div class="top-0 flex relative flex-col shrink-0 w-16 h-screen bg-amber-900/50 p-1" role="menu">
+    <div class="top-0 flex relative flex-col shrink-0 w-20 h-screen bg-amber-900/50 p-1" role="menu">
         <h1>Menu</h1>
         <ul>
-            <li><a href="./flex-column-with-fixed-row.html">Flex sticky</a></li>
+            <li class="cursor-pointer"><a href="./flex-column-with-fixed-row.html">Flex sticky</a></li>
         </ul>
     </div>
-    <div class="w-full bg-amber-100/50 p-4">
-        <div class="flex justify-between w-full h-23">
-            <div>
-                <div class="flex gap-2 flex-row items-center mt-5.25">
-                    Dashboard
+    <div class="w-full bg-orange-200/50 p-4">
+        <div class="z-20 left-18 right-0 top-0">
+            <nav class="flex items-center justify-end w-full h-14 py-0 px-10 bg-brown-100" role="navigation"
+                 aria-label="Navigation bar">
+                <div role="list" class="flex items-center justify-end [&amp;_div]:mr-2 [&amp;_div:last-child]:mr-0">
+                    <div class="text-sm text-gray-500 ml-4">v1.26.0</div>
                 </div>
+            </nav>
+        </div>
+        <div class="flex w-full h-[calc(100vh-56px)] overflow-scroll">
+            <div class="relative flex flex-col self-start w-full mx-11">
+                <div class="sticky top-0 z-30 min-h-23 bg-brown-600 pt-5 pb-1">
+                    <div class="flex justify-between w-full h-23">
+                        <div>
+                            <div class="flex gap-2 flex-row items-center mt-5.25"><h1
+                                    class=" text-2xl font-bold tracking-[0.8px] m-0 uppercase">Dashboard</h1></div>
+                        </div>
+                    </div>
+                </div>
+                <main class="flex flex-col items-start gap-12 pb-5">
+                    <div class="self-stretch p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-5 sticky top-[92px] drop-shadow-md">
+                        <div class="self-stretch inline-flex justify-start items-center gap-5">
+                            <div class="flex flex-wrap items-center justify-between w-full gap-3">
+                                <div class="relative w-80">
+                                    <div class="aria-disabled:text-gray-300 relative flex flex-col justify-start"
+                                         aria-disabled="false">
+                                    Toto
+                                    </div>
+                                </div>
+                                <dl class="flex gap-1">
+                                    <dt class="font-medium w-auto text-nowrap">Last updated:</dt>
+                                    <dd aria-labelledby="Last updated" class="w-36 whitespace-normal">Jan 15, 2026
+                                        14:41
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start gap-5"><h3
+                            class=" text-xl tracking-[0.67px] font-bold">Return volume</h3>
+                        <div class="flex flex-wrap justify-start items-start gap-5">
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Daily
+                                        returns volume</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/return/?qf=%7B%22createdAt%22%3A%7B%22dateFrom%22%3A%222026-01-15+00%3A00%3A00%22%2C%22dateTo%22%3A%222026-01-15+00%3A00%3A00%22%2C%22filterType%22%3A%22date%22%2C%22type%22%3A%22greaterThan%22%7D%7D"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Total
+                                        returns this month</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-start gap-5"><h3
+                            class=" text-xl tracking-[0.67px] font-bold">Return operations monitoring</h3>
+                        <div class="flex flex-wrap justify-start items-start gap-5">
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Return
+                                        label creation failed</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Pending
+                                        reception</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Pending
+                                        Quality check</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Pending
+                                        refund decision</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Returns
+                                        on hold</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Refund
+                                        failed</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Returns
+                                        ready for exchange order</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-[1_0_0] p-6 bg-gray-50 rounded-lg inline-flex flex-col justify-start items-start gap-12 min-w-[19rem] max-w-[19rem] h-52">
+                                <div class="self-stretch flex-1 flex flex-col justify-start items-start">
+                                    <div class="self-stretch inline-flex justify-between items-start"><h3
+                                            class=" text-lg font-medium tracking-wider text-gray-400">Credit
+                                        memo refund failed</h3><a
+                                            class="_id_link_cjmfm_1 font-medium underline text-gray-400 hover:text-gray-600"
+                                            href="/ok"
+                                            target="_blank" role="link">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                             width="24">
+                                            <path d="M13 5H19V11" stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                            <path d="M10.4443 13.5556L18.9999 5" stroke="currentColor"
+                                                  stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M16.6667 12.7778V17.4444C16.6667 17.857 16.5028 18.2526 16.2111 18.5444C15.9193 18.8361 15.5237 19 15.1111 19H6.55556C6.143 19 5.74733 18.8361 5.45561 18.5444C5.16389 18.2526 5 17.857 5 17.4444V8.88887C5 8.47631 5.16389 8.08065 5.45561 7.78892C5.74733 7.4972 6.143 7.33331 6.55556 7.33331H11.2222"
+                                                  stroke="currentColor" stroke-linecap="round"
+                                                  stroke-linejoin="round"></path>
+                                        </svg>
+                                    </a></div>
+                                    <div class="self-stretch flex-1 inline-flex justify-center items-center gap-2.5">
+                                        <div class="text-center justify-start text-4xl font-bold leading-10 tracking-wide">
+                                            0
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
     </div>
